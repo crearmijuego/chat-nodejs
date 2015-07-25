@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Chat Nodejs</title>
+     <!-- Compiled and minified CSS-->
+      <link rel="stylesheet" href="css/materialize.css"> 
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id = "users">
+        </div>
+                    <ul class="collection"> 
+        <div id="messages">
+
+              <div class="message" id="msgtpl" style="display:none;">
+                <img src="{{{user.avatar}}}">
+                <div class="info">
+                  <p><strong>{{user.username}}</strong></p>
+                  <p>{{message}}</p>
+                  <span class="date">{{h}}:{{m}}</span>
+                </div>
+              </div>
+
+        </div>
+              </ul>       
+        <div id="login">
+            <form action="" id="loginform">
+                <h1>Welcome</h1>
+                <p>Chat Nodejs</p>
+                <input type="text" name="login" id="username" placeholder="User Name">
+                <input type="email" name="mail" id="mail" placeholder="E-mail">
+                <button type="submit" value="Login" class="btn waves-effect waves-light">Login</button>
+            </form>
+        </div>
+        
+        <form action="" id="form">
+          <input type="text" id="message" class="input-field col s6"/>
+          <button type="submit" id="send" value="Send message !" class="submit btn waves-effect waves-light">Send </button>
+        </form>
+      <!-- Compiled and minified JavaScript -->  
+     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/materialize.min.js"></script>     
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
